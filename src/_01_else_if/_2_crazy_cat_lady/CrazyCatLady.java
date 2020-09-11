@@ -3,16 +3,28 @@ package _01_else_if._2_crazy_cat_lady;
 
 import java.net.URI;
 
+import javax.swing.JOptionPane;
+
 public class CrazyCatLady {
 	public static void main(String[] args) {
 		
 		// 1. Ask the user how many cats they have
+		String question = JOptionPane.showInputDialog("How many cats do you have?");
 		// 2. Convert their answer into an int
+		int num = Integer.parseInt(question);
 		// 3. If they have 3 or more cats, tell them they are a crazy cat lady
+		if(num >= 3) {
+			JOptionPane.showMessageDialog(null, "You're a CRAZY CAT LADY!!!");
+		}
 		// 4. If they have less than 3 cats AND more than 0 cats, call the method below to show them a cat video
-		//    Hint: You can use the && operator 
+		//    Hint: You can use the && operator
+		else if(num > 0 && num < 3) {
+			JOptionPane.showMessageDialog(null, "That is the perfect amount of cats.");
+		}
 		// 5. If they have 0 cats, show them a video of A Frog Sitting on a Bench Like a Human
-		
+		else {
+			JOptionPane.showMessageDialog(null, "That's too bad.");
+		}
 		
 		
 		
